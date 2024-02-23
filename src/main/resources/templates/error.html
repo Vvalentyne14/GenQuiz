@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>error</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" th:href="@{/css/register.css}"/>
+</head>
+<body>
+<div class="row mt-2">
+    <div th:if="${param.invalid}" class="param">
+        <p class="alert alert-danger">Invalid verification token</p>
+    </div>
+    <div th:if="${param.expired}" class="param">
+        <p class="alert alert-warning">This verification link has already expired.</p>
+
+    </div>
+    <div th:if="${param.error}" class="param">
+        <p class="alert alert-warning"> Sorry, an errored occured</p>
+    </div>
+</div>
+</body>
+</html>

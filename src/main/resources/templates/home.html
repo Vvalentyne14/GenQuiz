@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/js/index.js}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap"
+      rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="navbar">
+      <div class="vet">
+        <h1 class="h1-vet">For</h1>
+        <div class="menu menu-3">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <h1 class="h1-vet-1">Tech</h1>
+
+      <div class="tools">
+        <ul>
+          <li><a href="#">Home</a></li>
+
+          <li>
+            <span class="dropdown-btn">Ai tools
+              <i class="fa-solid fa-angle-down"></i></span>
+            <div class="dropdown-content">
+              <a href="#">Option 1</a>
+              <a href="#">Option 2</a>
+            </div>
+          </li>
+
+          <li>
+            <span class="dropdown-btn">Resources
+              <i class="fa-solid fa-angle-down"></i></span>
+            <div class="dropdown-content">
+              <a href="#">Blog</a>
+              <a href="#">Tutorial</a>
+            </div>
+          </li>
+
+          <li>
+            <span class="dropdown-btn">About Us
+              <i class="fa-solid fa-angle-down"></i></span>
+            <div class="dropdown-content">
+              <a href="#">Contacts</a>
+              <a href="#">Faqs</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="both">
+        <div class="nav-2" th:if="${#authorization.expression('isAuthenticated')}">
+          <form th:action="@{/logout}" method="get">
+            <button type="submit" class="login-btn">Logout</button>
+          </form>
+        </div>
+
+        <div class="nav-2" th:unless="${#authorization.expression('isAuthenticated()')}">
+          <form th:action="@{/login-page}" method="get">
+            <button type="submit" class="login-btn">Login</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="video-background">
+      <video autoplay muted loop plays-inline id="myVideo">
+        <source src="/video/pexels-pavel-danilyuk-8087009 (2160p).mp4 "
+          type="video/mp4">
+        Your browser does not support the video tag.
+
+      </video>
+      <h1 id="bg-center">Welcome to Gpts AI tools. </h1>
+    </div>
+
+    <section class="main">
+      <h1 class="product">Our Products</h1>
+      <div class="cards">
+        <div class="card-1">
+          <img src="./images/pexels-luis-gomes-546819.jpg">
+          <h3>Explore LinguifySql Al tools, and interate with Database
+            easily</h3>
+        </div>
+
+        <div class="card-1">
+          <img src="./images/pexels-jorge-jesus-614117.jpg">
+          <h3>Explore LinguifySql Al tools, and interate with Database
+            easily</h3>
+        </div>
+
+        <div class="card-1">
+          <img src="./images/pexels-pavel-danilyuk-8438918.jpg">
+          <h3>Explore LinguifySql Al tools, and interate with Database
+            easily</h3>
+        </div>
+        <div class="card-1">
+          <img src="./images/pexels-pixabay-256381.jpg">
+          <h3>Explore LinguifySql Al tools, and interate with Database
+            easily</h3>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <p> copyRight 2024</p>
+    </footer>
+    <script src="./js/index.js"></script>
+    <script src="https://kit.fontawesome.com/e553bc6b9d.js"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </body>
+</html>
