@@ -20,11 +20,6 @@ public class HomeController {
             return "login";
     }
 
-    @GetMapping("/login-page")
-    public String loginPage() {
-        return "loginOption";
-    }
-
     @GetMapping("/error")
     public String error() {
         return "error";

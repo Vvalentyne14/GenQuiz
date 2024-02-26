@@ -32,8 +32,8 @@ public class SecurityConfig {
 
                 .authorizeRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers("/admin/**").hasRole("ADMIN")
-                                .requestMatchers("/user/**").hasRole("ADMIN")
+//                                .requestMatchers("/admin/**").hasRole("ADMIN")
+//                                .requestMatchers("/users/**").hasRole("ADMIN")
                                 .requestMatchers(String.valueOf(PathRequest.toStaticResources().atCommonLocations())).permitAll()
                                 .requestMatchers("/","/login","/login-page","/error","/registration/**").permitAll()
                                 .requestMatchers("/css/**","/js/**","/images/**","/video/**","/static/**").permitAll()

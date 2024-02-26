@@ -36,13 +36,13 @@ public class RegistrationController {
      private final IUserService userService;
 
     @Autowired
-     public RegistrationController(IUserService iUserService, ApplicationEventPublisher publisher, HttpServletRequest request, VerificationTokenService tokenService, IPasswordResetTokenService passwordResetTokenService, RegistrationCompleteEmailSender emailSender, IUserService userService) {
+    public RegistrationController(IUserService iUserService, ApplicationEventPublisher publisher, HttpServletRequest request, VerificationTokenService tokenService, IPasswordResetTokenService passwordResetTokenService, RegistrationCompleteEmailSender emailSender, IUserService userService) {
         this.iUserService = iUserService;
         this.publisher = publisher;
         this.request = request;
         this.tokenService = tokenService;
-         this.passwordResetTokenService = passwordResetTokenService;
-         this.emailSender = emailSender;
+        this.passwordResetTokenService = passwordResetTokenService;
+        this.emailSender = emailSender;
         this.userService = userService;
     }
 

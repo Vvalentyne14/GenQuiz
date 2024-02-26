@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update User</title>
+    <link rel="stylesheet" th:href="@{/css/register.css}"/>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+<div class="container">
+    <h2 class="h2">Edit Users</h2>
+    <form th:action="@{/users/update/{id}(id=${user.id})}" method="post" th:object="${user}" class="form">
+        <input type="hidden" th:field="*{id}">
+        <div class="form-control">
+            <div class="form-con">
+                <input type="text"  id="firstname" autofocus="autofocus"
+                       class="form-control" required name="firstname" th:field="*{firstname}" placeholder="firstname" >
+            </div>
+        </div>
+
+        <div class="form-control">
+
+            <div class="form-con">
+                <input type="text"  id="lastname" autofocus="autofocus"
+                       class="form-control" required name="lastName" th:field="*{lastname}" placeholder="lastname">
+            </div>
+        </div>
+
+        <div class="form-control">
+            <div class="form-con">
+                <input type="email"  id="email" autofocus="autofocus"
+                       class="form-control" required name="email" th:field="*{email}" placeholder="email">
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn">Update User</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+

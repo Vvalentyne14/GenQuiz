@@ -1,0 +1,35 @@
+*,::before,::after {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    margin: 100px 300px;
+}
+.param {
+    background-color: #61a761;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+}
+.table {
+   width: 100%;
+}
+tr th, tr td {
+    font-size: 20px;
+    font-family: "Kode Mono", sans-serif;
+    font-weight: 400;
+    padding: 15px 10px;
+    border: 1px solid rgb(143, 141, 141);
+}
+.btn-danger {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+}
+.btn-info {
+    padding: 5px 10px; 
+    background-color: #61a761;
+    color: white;
+}

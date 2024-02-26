@@ -4,6 +4,7 @@ import jakarta.mail.internet.MimeMessage;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.NaturalId;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -34,6 +35,7 @@ public class Users implements JavaMailSender {
     private String lastname;
     @Setter
     @Getter
+    @NaturalId(mutable = true)
     private String email;
     @Setter
     @Getter

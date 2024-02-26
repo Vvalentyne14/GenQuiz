@@ -9,4 +9,10 @@ public interface IUserService {
     List<Users> getAllUsers();
     Users registerUser(RegistrationRequest request);
     Optional<Users> findByEmail(String email);
+
+    Optional<Users> findById(Long id);
+
+    void updateUser(Long id, String firstname, String lastname, String email);
+
+    void deleteUser(Long id);
 }

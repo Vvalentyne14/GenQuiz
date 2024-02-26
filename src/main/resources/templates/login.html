@@ -45,15 +45,19 @@
 
         <div class="but-div">
             <button type="submit" class="btn btn-success" id="login" name="login">Login</button>
-            <span>Not registered yet? <a href="#" th:href="@{/registration/registration-form} ">
+            <span class="span">Not registered yet? <a href="#" th:href="@{/registration/registration-form} ">
                      Register
-        </a> </span>
-            <span><a href="/" th:href="@{/registration/forget-password-request} ">
+        </a> </span><br>
+
+        </div>
+        <a class="btn-google" href="/oauth2/authorization/google"><img src="./images/icons8-google.svg" alt="Google">login with google </a>
+        <a class="btn-fb" href="/oauth2/authorization/facebook"><img src="./images/icons8-facebook.svg" alt="Google">login with facebook</a>
+        <span><a href="/" th:href="@{/registration/forget-password-request} ">
                     Forget Password
         </a> </span>
-        </div>
-
     </form>
+    <script src="https://kit.fontawesome.com/e553bc6b9d.js"
+            crossorigin="anonymous"></script>
 </div>
 </body>
 </html>

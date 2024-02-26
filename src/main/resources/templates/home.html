@@ -67,7 +67,7 @@
         </div>
 
         <div class="nav-2" th:unless="${#authorization.expression('isAuthenticated()')}">
-          <form th:action="@{/login-page}" method="get">
+          <form th:action="@{/login}" method="get">
             <button type="submit" class="login-btn">Login</button>
           </form>
         </div>
