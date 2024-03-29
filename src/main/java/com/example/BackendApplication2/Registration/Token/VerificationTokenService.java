@@ -2,14 +2,12 @@ package com.example.BackendApplication2.Registration.Token;
 
 import com.example.BackendApplication2.User.UserRepository;
 import com.example.BackendApplication2.User.Users;
-import jakarta.transaction.Transactional;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Calendar;
 import java.util.Optional;
-import java.util.UUID;
+
 
 @Service
 public class VerificationTokenService implements IVerificationTokenService {

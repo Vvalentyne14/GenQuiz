@@ -1,4 +1,4 @@
-package com.example.BackendApplication2.Home;
+package com.example.BackendApplication2.Controllers;
 
 
 import org.springframework.stereotype.Controller;
@@ -10,8 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class HomeController {
 
-    @GetMapping
+    @GetMapping("/")
     public String homePage() {
+        return "home";
+    }
+
+    @GetMapping("/home")
+    public String home() {
         return "home";
     }
 

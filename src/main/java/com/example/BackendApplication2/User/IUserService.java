@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface IUserService {
     List<Users> getAllUsers();
-    Users registerUser(RegistrationRequest request);
+    Users registerUser(RegistrationRequest registrationRequest);
     Optional<Users> findByEmail(String email);
 
     Optional<Users> findById(Long id);

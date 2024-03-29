@@ -24,8 +24,8 @@ public class UserController {
     @GetMapping("edit/{id}")
     public String showUpdateForm(@PathVariable("id") Long id, Model model){
         Optional<Users> user = userService.findById(id);
-        model.addAttribute("user", user.get());
-        return "update-user";
+        user.ifPresent(users -> model.addAttribute("user", users));
+            return "update-user";
     }
 
     @PostMapping("update/{id}")

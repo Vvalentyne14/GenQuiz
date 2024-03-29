@@ -22,7 +22,7 @@ public class RegistrationCompleteEmailSender implements ApplicationListener<Regi
     private final JavaMailSender mailSender; // Injected JavaMailSender bean
     private Users user;
 
-    @Autowired
+
     public RegistrationCompleteEmailSender(VerificationTokenService tokenService, JavaMailSender mailSender) {
         this.tokenService = tokenService;
         this.mailSender = mailSender;
@@ -34,7 +34,6 @@ public class RegistrationCompleteEmailSender implements ApplicationListener<Regi
         String vToken = UUID.randomUUID().toString();
         tokenService.saveVerificationForUser(user, vToken);
 
-//        TokenResponseDTO tokenResponseDTO = generateTokensForUser(user);
 
         String url = "http://localhost:8080/registration/verifyEmail?token="+vToken;
 

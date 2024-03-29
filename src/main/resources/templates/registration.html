@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>User registration form</title>
 
-    <!-- <link rel="stylesheet" href="/static/css/register.css"> -->
     <link rel="stylesheet" th:href="@{/css/register.css}"/>
 
 
@@ -17,6 +16,9 @@
         <div class="row mt-2">
             <div th:if="${param['success']}" class="param">
                 Registration successful, Please check your email to complete your registration.
+            </div>
+            <div th:if="${param['error']}" class="param">
+                Something went wrong, try using another email.
             </div>
         </div>
 

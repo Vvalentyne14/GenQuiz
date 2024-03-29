@@ -15,6 +15,12 @@ body {
 .navbar {
     display: flex;
     color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 20px;
+    z-index: 1;
 }
 .vet {
     display: flex;
@@ -31,11 +37,14 @@ body {
     margin-right: 10px;
     letter-spacing: 5px;
 }
+.scrolled {
+    background-color: rgb(37, 36, 36);
+}
 .menu {
     display: flex;
     flex-direction: column;
     gap: 4px;
- 
+
 }
 .menu-3 .line {
     padding: 1px 20px;
@@ -58,12 +67,12 @@ body {
     margin-top: 55px;
     margin-left: 70px;
     padding: 0 10px;
- 
+
 }
 li {
     list-style: none;
     padding: 0 20px;
-  
+
 }
 li a {
     color: white;
@@ -91,7 +100,7 @@ li a:hover {
     position: absolute;
     /* Other styling as needed */
   }
-  
+
   .dropdown-content a {
     color: rgb(255, 255, 255);
     margin-top: 10px;
@@ -100,12 +109,12 @@ li a:hover {
     font-size: 18px;
     margin-left: 20px;
   }
-  
+
   .dropdown-content.show {
     display: flex;
     flex-direction: column;
   }
-  
+
 
 .both {
     margin-left: 20rem;
@@ -139,7 +148,7 @@ li a:hover {
     font-size: 55px;
     color: white;
     max-width: 1000px;
-    
+
 }
 @media (min-aspect-ratio:16/9) {
     #myVideo {
@@ -175,10 +184,12 @@ li a:hover {
 }
 .card-1 {
     max-width: 300px;
+    text-decoration: none;
 }
+
 .product {
     color: rgb(248, 248, 248);
-    margin-top: 40px;
+    margin-top: 100px;
     margin-left: 10px;
     max-width: 500px;
     letter-spacing: 10px;

@@ -35,7 +35,12 @@ public class SecurityConfig {
 //                                .requestMatchers("/admin/**").hasRole("ADMIN")
 //                                .requestMatchers("/users/**").hasRole("ADMIN")
                                 .requestMatchers(String.valueOf(PathRequest.toStaticResources().atCommonLocations())).permitAll()
-                                .requestMatchers("/","/login","/login-page","/error","/registration/**").permitAll()
+                                .requestMatchers("/",
+                                        "/login",
+                                        "/login-page",
+                                        "/error",
+                                        "/registration/**"
+                                ).permitAll()
                                 .requestMatchers("/css/**","/js/**","/images/**","/video/**","/static/**").permitAll()
                                 .anyRequest().authenticated()
                 )
@@ -43,7 +48,7 @@ public class SecurityConfig {
                 .oauth2Login((auth) ->
                         auth
                                 .loginPage("/login") // Specify your custom login page
-                                .defaultSuccessUrl("/", true)
+                                .defaultSuccessUrl("/home", true)
                                 .permitAll() //
                 )
 
@@ -56,7 +61,7 @@ public class SecurityConfig {
                         formLogin
                                 .loginPage("/login") // Specify your custom login page
                                 .usernameParameter("email")
-                                .defaultSuccessUrl("/", true)
+                                .defaultSuccessUrl("/home", true)
                                 .permitAll() // Allow all users to access the login page
 
                         )
@@ -78,6 +83,4 @@ public class SecurityConfig {
         repository.setSessionAttributeName("_csrf");
         return repository;
     }
-    
-
 }

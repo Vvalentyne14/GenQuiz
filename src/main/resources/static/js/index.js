@@ -54,3 +54,13 @@ document.addEventListener('DOMContentLoaded', function () {
   
 });
 
+const navbar = document.querySelector(".navbar");
+window.addEventListener("scroll", () => {
+  if (this.scrollY >= 200) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+
